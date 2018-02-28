@@ -1,17 +1,38 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 html, body {
 	width: 100vw;
 	min-height: 100vh;
 	margin: 0;
 	padding: 0;
-	/* background-color: #f5f6f6; */
+	background-color: #f5f6f6;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+}
+
+h1 {
+	font-size: 3.5em;
+}
+
+h3 {
+	font-size: 1.3em;
+}
+
+h2 {
+	font-size: 2em;
 }
 
 .App {
-	width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "header"
 		"hero"
 		"hero"
     "benefits"
@@ -35,43 +56,100 @@ html, body {
 	max-width: 80rem;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 4.5rem;
-  padding-bottom: 4.5rem
+	padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 /* Header */
-.header {
-	grid-area: header;
-}
 /* Hero */
 .hero {
 	grid-area: hero;
-	background-image: url('./images/hero-image2.jpg');
-	width: 100%;
-	height: 40em;
+	background-image: url('./images/website-banner.png');
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 45em;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	color: white;
 }
 
-.hero-content{
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-	color: white;
+.hero-logo {
+	padding: 10px;
+	position:absolute;
+	top: 0;
+	left: 0;
+	text-align: left;
+}
+
+.hero-language {
+	padding: 10px;
+	position:absolute;
+	top: 0;
+	right: 0;
+	text-align: right;
+}
+
+.hero-content {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hero-content h1 {
+	margin-bottom: 10px;
+}
+
+.hero-subheader {
+	font-size: 1.3em;
+	margin-bottom: 70px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: 300;
+}
+
+.hero-text {
+	font-size: 0.8em;
+}
+
+
+.hero-content button {
+	font-size: 1.5em;
+
 }
 /* Benefits */
 .benefits {
 	grid-area: benefits;
+	font-weight: 300;
 }
+
 .benefits-content {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 20px;
 }
+
+.benefits-content p {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
 /* About */
 .about {
 	grid-area: about;
-	background-color: #2e3192;
+	background-color: #283889;
 	color: white;
 }
+
+.about-content{
+	width: 80%;
+}
+
+.about-content p {
+	font-size: 1.5em;
+}
+
 /* Steps */
 .steps {
 	grid-area: steps;
@@ -81,13 +159,35 @@ html, body {
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-gap: 20px;
 }
+
 .steps-step {
 	background-color: white;
+}
+
+.steps-step p {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.steps-step img{
+	height: 10em;
+}
+
+.steps-header {
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	font-size: 1.8em;
+}
+
+.steps-header p {
+	margin-top: 0;
 }
 /* Freebie */
 .freebie {
 	grid-area: freebie;
-	background-color: #2e3192;
+	background-color: #283889;
 }
 .freebie-content {
 	display: grid;
@@ -96,9 +196,28 @@ html, body {
 	color: white;
 }
 
-.freebie-content img {
+.freebie-image img {
 	width: 250px;
 	height: auto;
+}
+
+.freebie-text {
+	text-align: left;
+	width: 60%;
+}
+
+.freebie-text button {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 10px;
+}
+
+.freebie-text h3{
+	color: #ede839;
+}
+
+.freebie-text p {
+	font-size: 1.5em;
 }
 /* FAQ */
 .faq {
@@ -120,7 +239,7 @@ html, body {
 }
 .partners-content img{
 	height: 80px;
-	width: auto;
+
 }
 /* Footer */
 .footer {
@@ -131,8 +250,8 @@ html, body {
 }
 
 button {
-	color: #e6e6e6;
-	background: #0a0a0a;
+	color: #black;
+	background: #ede839;
 	border: none;
 	font-size: 16px;
 	border-radius: 3px;
@@ -141,4 +260,52 @@ button {
 	display: block;
 	padding: 7px 0;
 	margin: 10px auto;
+	font-weight: bold;
+}
+
+@media all and (max-width: 980px) {
+	.benefits-content {
+		grid-template-columns: 1fr 1fr;
+	}
+	.steps-content {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media all and (max-width: 736px) {
+	.benefits-content {
+		grid-template-columns: 1fr 1fr;
+	}
+	.steps-content {
+		grid-template-columns: 1fr;
+	}
+	.partners-content {
+		grid-template-columns: 1fr 1fr;
+	}
+
+}
+@media all and (max-width: 480px) {
+	/* h1 {
+		font-size: 2.0em;
+	}
+	.hero-subheader {
+		font-size: 0.8em;
+	}
+	.hero-text {
+		font-size: 0.5em;
+	}
+	.hero {
+		height: 30em;
+	} */
+	.benefits-content {
+		grid-template-columns: 1fr;
+	}
+	.steps-content {
+		grid-template-columns: 1fr;
+	}
+	.freebie-content {
+		grid-template-columns: 1fr;
+	}
+	.partners-content {
+		grid-template-columns: 1fr;
+	}
 }
