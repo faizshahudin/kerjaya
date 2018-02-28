@@ -1,0 +1,144 @@
+html, body {
+	width: 100vw;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	/* background-color: #f5f6f6; */
+}
+
+.App {
+	width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+		"hero"
+		"hero"
+    "benefits"
+		"benefits"
+		"about"
+		"steps"
+		"steps"
+		"freebie"
+		"freebie"
+		"faq"
+		"faq"
+		"partners"
+		"footer";
+}
+
+.App {
+  text-align: center;
+}
+
+.container {
+	max-width: 80rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 4.5rem;
+  padding-bottom: 4.5rem
+}
+
+/* Header */
+.header {
+	grid-area: header;
+}
+/* Hero */
+.hero {
+	grid-area: hero;
+	background-image: url('./images/hero-image2.jpg');
+	width: 100%;
+	height: 40em;
+}
+
+.hero-content{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+}
+/* Benefits */
+.benefits {
+	grid-area: benefits;
+}
+.benefits-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 20px;
+}
+/* About */
+.about {
+	grid-area: about;
+	background-color: #2e3192;
+	color: white;
+}
+/* Steps */
+.steps {
+	grid-area: steps;
+}
+.steps-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 20px;
+}
+.steps-step {
+	background-color: white;
+}
+/* Freebie */
+.freebie {
+	grid-area: freebie;
+	background-color: #2e3192;
+}
+.freebie-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	color: white;
+}
+
+.freebie-content img {
+	width: 250px;
+	height: auto;
+}
+/* FAQ */
+.faq {
+	grid-area: faq;
+}
+
+.faq-content li {
+	list-style-type: none;
+}
+/* Partners */
+.partners {
+	grid-area: partners;
+	background-color: lightGrey;
+}
+.partners-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 20px;
+}
+.partners-content img{
+	height: 80px;
+	width: auto;
+}
+/* Footer */
+.footer {
+	grid-area: footer;
+	background-color: black;
+	color: white;
+	font-size: 0.5em;
+}
+
+button {
+	color: #e6e6e6;
+	background: #0a0a0a;
+	border: none;
+	font-size: 16px;
+	border-radius: 3px;
+	width: 200px;
+	text-align: center;
+	display: block;
+	padding: 7px 0;
+	margin: 10px auto;
+}
