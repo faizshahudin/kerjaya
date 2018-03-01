@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import logo from "./images/jobmatching-logo.png"
 
 function Hero(props) {
   const content = {
@@ -19,7 +20,7 @@ function Hero(props) {
 
   return (
     <header className="hero">
-      <div className="hero-logo">#KerjaYa</div>
+      <img className="hero-logo" src={logo} alt={"Photo of JobMatching logo."}></img>
       <div className="hero-language">
         {language == "english" &&
         <button
