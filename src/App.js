@@ -17,7 +17,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.language)
     return (
       <div className="App">
         <Route exact path="/" render={() => (
@@ -27,7 +26,9 @@ class App extends Component {
         />
         )} />
         <Route path="/register" render={() => (
-          <Register />
+          <Register
+          language={this.state.language}
+          />
         )} />
         <footer className="footer">
           <p>Copyright © Prestariang Bhd.</p>

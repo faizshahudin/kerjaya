@@ -37,6 +37,7 @@ class Home extends Component {
         <Partners language={this.props.language}/>
         {this.state.showModal &&
           <Register
+            language={this.props.language}
           toggleModal={this.handleToggleModal}
           showModal={this.state.showModal}
           />

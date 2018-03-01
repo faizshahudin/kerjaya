@@ -84,6 +84,14 @@ h2 {
 	text-align: right;
 }
 
+.hero-language button {
+	color: white;
+	border: none;
+	background-color: inherit;
+	cursor: pointer;
+	display: inline-block;
+}
+
 .hero-content {
 	width: 80%;
 	margin-left: auto;

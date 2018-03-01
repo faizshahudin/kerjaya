@@ -21,11 +21,21 @@ function Hero(props) {
     <header className="hero">
       <div className="hero-logo">#KerjaYa</div>
       <div className="hero-language">
-        <select
-          onChange={(e) => {props.changeLanguage(e.target.value)}}>
-          <option value="bm">Bahasa Melayu</option>
-          <option value="english">English</option>
-        </select>
+        {language == "english" &&
+        <button
+          value="bm"
+          onClick={(e) => {props.changeLanguage(e.target.value)}}
+          >Bahasa Melayu
+        </button>
+        }
+        {language == "bm" &&
+        <button
+          value="english"
+          onClick={(e) => {props.changeLanguage(e.target.value)}}
+          >English
+        </button>
+        }
+
       </div>
       <div className="container">
         <div className="hero-content">

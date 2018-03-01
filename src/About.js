@@ -12,27 +12,12 @@ let About = (props) => {
     }
   }
   let language = props.language
-  console.log(content[language].header)
   return (
     <section className="about">
-      {/* {props.language == "english" &&
-      <div className="about-content container">
-        <h2>{content.english.header}</h2>
-        <button>{content.english.button}</button>
-      </div>
-      }
-      {props.language == "bm" &&
-      <div className="about-content container">
-        <h2>{content.bm.header}</h2>
-        <button>{content.bm.button}</button>
-      </div>
-      } */}
-
       <div className="about-content container">
         <h2>{content[language].header}</h2>
         <button>{content[language].button}</button>
       </div>
-
     </section>
   )
 }

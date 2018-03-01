@@ -9,6 +9,20 @@ class Register extends Component {
       email: ""
     }
     this.modal
+    this.content = {
+      english: {
+        header: "SIGN UP TO GET A JOB",
+        placeholder: {name: "Full Name", email: "Email Address"},
+        button: "Register Now",
+        terms: "*By signing up, you agree to our Terms & Privacy Policy and Personal Data Protection Act (PDPA) 2010."
+      },
+      bm: {
+        header: "DAFTAR UNTUK KERJAYA BARU",
+        placeholder: {name: "Nama Penuh", email: "Alamat Emel"},
+        button: "Daftar Sekarang",
+        terms: "*Dengan mendaftar, anda adalah dengan ini bersetuju dengan segala syarat dan Polisi Privasi, termasuk Akta Perlindungan Data Peribadi (PDPA) – 2010."
+      },
+    }
   }
 
   componentDidMount() {
@@ -27,8 +41,16 @@ class Register extends Component {
       }
     }
   }
+  //
+  // handleChange = (field, event) => {
+  //   let value = event.target.value
+  //   this.setState((state) => ({
+  //     state[field]: value
+  //   }))
+  // }
 
   render() {
+    let language = this.props.language
     return(
       <div className="register">
         <div className="register-container"
@@ -39,21 +61,21 @@ class Register extends Component {
           <form className="register-form container">
             <img className="register-form-logo" src={logo} alt={"Photo of JobMatching logo."}></img>
             <label className="register-header">
-              <h2>DAFTAR UNTUK KERJAYA BARU</h2>
+              <h2>{this.content[language].header}</h2>
             </label>
             <div className="register-input-fields">
               <input
-                id="username"
-                placeholder="Nama Penuh"
+                id="name"
+                placeholder={this.content[language].placeholder.name}
                 type="text"
                 autoComplete="off"
                 value={this.state.name}
-                onChange={this.handleChange}
+                onChange={(e) => (this.handleChange("name", e))}
                 >
               </input>
               <input
                 id="username"
-                placeholder="Alamat Emel"
+                placeholder={this.content[language].placeholder.email}
                 type="text"
                 autoComplete="off"
                 value={this.state.email}
@@ -66,10 +88,9 @@ class Register extends Component {
               type="submit"
               disabled={!this.state.email}
               >
-                Daftar Sekarang
+                {this.content[language].button}
             </button>
-            <p>*Dengan mendaftar, anda adalah dengan ini bersetuju dengan segala syarat dan Polisi Privasi,
-              termasuk Akta Perlindungan Data Peribadi (PDPA) – 2010.
+            <p>{this.content[language].terms}
             </p>
           </form>
         </div>
