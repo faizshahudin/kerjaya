@@ -288,7 +288,7 @@ button {
 	left: 0;
 	bottom: 0;
 	padding: 1rem;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(40, 56, 137, 0.95);
 	z-index: 9999;
 	opacity: 1;
 	overflow-x: hidden;
@@ -297,10 +297,53 @@ button {
 }
 
 .register-container {
-	 width: 100%;
-	 background-color: #fff;
-	 box-shadow: [0, 0, 0.625rem, rgba(0, 0, 0, 0.2)];
+	 width: 60%;
+	 background-color: white;
+	 box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	 border-radius: 10px;
  }
+
+.register-form p {
+	font-size: 0.6em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.register-form button {
+	color: black;
+	width: 100%;
+	padding: 10px;
+}
+
+.register-form {
+	padding-top: 20px;
+}
+
+.register-form-logo {
+	height: 60px;
+	margin-bottom: 40px;
+}
+
+.register-header {
+	color: black;
+}
+
+.register-input-fields {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.register-input-fields input {
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.43);
+  font-size: 16px;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 @media all and (max-width: 980px) {
 	.benefits-content {
@@ -309,6 +352,9 @@ button {
 	.steps-content {
 		grid-template-columns: 1fr 1fr;
 	}
+	.register-container {
+		 width: 100%;
+	 }
 }
 @media all and (max-width: 736px) {
 	.benefits-content {
@@ -334,6 +380,12 @@ button {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.register-container {
+		 width: 100%;
+	 }
+	 .register-input-fields {
+		grid-template-columns: 1fr;
+	 }
 }
 @media all and (max-width: 480px) {
 	.benefits-content {
@@ -359,4 +411,10 @@ button {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.register-container {
+		 width: 100%;
+	 }
+	 .register-input-fields {
+	 	grid-template-columns: 1fr;
+	 }
 }
