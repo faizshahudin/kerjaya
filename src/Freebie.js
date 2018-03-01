@@ -12,7 +12,12 @@ function Freebie() {
         <div className="freebie-text">
           <h4>Limited Offer!</h4>
           <h3>JOIN NOW AND GET YOUR FREEBIE</h3>
-          <p>5 Proven Interview Techniques to Make you Stand Out From the Crowd!</p>
+          <p><strong>The Only Info Pack You Need to Kick-start Your Career!</strong></p>
+          <ul>
+            <li>10 Proven Tips for A Successful Interview</li>
+            <li>Your All-in-One Resumt Preperation Guide</li>
+            <li>10 Secret Techniques to Elevate Your Communication Skills</li>
+          </ul>
           <button>Register and Claim My Freebie</button>
         </div>
       </div>

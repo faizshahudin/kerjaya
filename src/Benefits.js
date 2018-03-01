@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import benefitIconOne from "./icons/income.png"
-import benefitIconTwo from "./icons/alarm-clock.png"
-import benefitIconThree from "./icons/business-partnership.png"
-import benefitIconFour from "./icons/teaching.png"
+import benefitIconOne from "./icons/loan.png"
+import benefitIconTwo from "./icons/handshake.png"
+import benefitIconThree from "./icons/presentation.png"
 
 function Benefits(props) {
   const benefits = [
@@ -12,19 +11,14 @@ function Benefits(props) {
       img: benefitIconOne
     },
     {
-      header: "Save Time",
-      text: "Stop browsing through countless job ads. #KerjaYa recommends you the right job.",
-      img: benefitIconTwo
-    },
-    {
       header: "Job Matching",
       text: "#KerjaYa connects you to the right employer based on your profile",
-      img: benefitIconThree
+      img: benefitIconTwo
     },
     {
       header: "Free Coaching",
       text: "Get access to FREE coaching and training materials to get you ready for employment",
-      img: benefitIconFour
+      img: benefitIconThree
     }
   ]
 

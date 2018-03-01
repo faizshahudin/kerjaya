@@ -44,14 +44,14 @@ function Faqs() {
     <section className="faq">
       <div className="container">
         <h3>Common Questions</h3>
-        <ul className="faq-content">
+        <div className="faq-content">
           {questions.map((question) => (
-            <li>
+            <div>
               <h5>Q: {question.header}</h5>
               <p>{question.text}</p>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   )
