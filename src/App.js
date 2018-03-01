@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import Hero from "./Hero"
-import About from "./About"
-import Benefits from "./Benefits"
-import Steps from "./Steps"
-import Freebie from "./Freebie"
-import Faqs from "./Faqs"
-import Partners from "./Partners"
+import Home from "./Home"
+import Register from "./Register"
+import { Route } from "react-router-dom"
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      language: "english"
+      language: "bm"
     }
   }
 
@@ -24,16 +20,15 @@ class App extends Component {
     console.log(this.state.language)
     return (
       <div className="App">
-        <Hero
-          changeLanguage={this.changeLanguage}
+        <Route exact path="/" render={() => (
+          <Home
           language={this.state.language}
+          changeLanguage={this.changeLanguage}
         />
-        <Benefits language={this.state.language}/>
-        <About language={this.state.language}/>
-        <Steps language={this.state.language}/>
-        <Freebie language={this.state.language}/>
-        <Faqs language={this.state.language}/>
-        <Partners language={this.state.language}/>
+        )} />
+        <Route path="/register" render={() => (
+          <Register />
+        )} />
         <footer className="footer">
           <p>Copyright © Prestariang Bhd.</p>
           <p>All rights reserved. All trademarks referenced herein are the properties of their respective owners.</p>

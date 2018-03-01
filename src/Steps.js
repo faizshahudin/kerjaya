@@ -82,7 +82,7 @@ function Steps(props) {
     <section className="steps">
       <div className="container">
         <div className="steps-header">
-          <p>{steps.headers[language]}</p>
+          <p><strong>{steps.headers[language]}</strong></p>
         </div>
         <div className="steps-content">
           {steps[language].map((step) => (

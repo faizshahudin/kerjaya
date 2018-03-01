@@ -23,15 +23,18 @@ function Hero(props) {
       <div className="hero-language">
         <select
           onChange={(e) => {props.changeLanguage(e.target.value)}}>
-          <option value="english">English</option>
           <option value="bm">Bahasa Melayu</option>
+          <option value="english">English</option>
         </select>
       </div>
       <div className="container">
         <div className="hero-content">
           <h1>{content[language].header}</h1>
           <p className="hero-subheader">{content[language].subheader}</p>
-          <button>{content[language].button}</button>
+          <button
+            type="button"
+            onClick={props.toggleModal}
+            >{content[language].button}</button>
           <p className="hero-text">{content[language].text}</p>
         </div>
       </div>

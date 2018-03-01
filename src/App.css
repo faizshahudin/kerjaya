@@ -28,7 +28,7 @@ h2 {
 	font-size: 2em;
 }
 
-.App {
+.Home {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -42,7 +42,7 @@ h2 {
 		"footer";
 }
 
-.App {
+.Home {
   text-align: center;
 }
 
@@ -152,11 +152,16 @@ h2 {
 /* Steps */
 .steps {
 	grid-area: steps;
+	background-color: #f9f9f8;
 }
 .steps-content {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-gap: 20px;
+}
+
+.steps-step {
+	background-color: white;
 }
 
 .steps-step p {
@@ -167,13 +172,13 @@ h2 {
 }
 
 .steps-step img{
-	height: 10em;
+	height: 7em;
 }
 
 .steps-header {
 	margin-left: auto;
 	margin-right: auto;
-	width: 60%;
+	width: 80%;
 	font-size: 1.8em;
 }
 
@@ -238,7 +243,7 @@ h2 {
 /* Partners */
 .partners {
 	grid-area: partners;
-	background-color: #f9f9f9;
+	background-color: #f9f9f8;
 }
 .partners-content {
 	display: grid;
@@ -271,6 +276,31 @@ button {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+/* Register */
+.register {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	padding: 1rem;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 9999;
+	opacity: 1;
+	overflow-x: hidden;
+	overflow-y: auto;
+	animation: show .5s ease;
+}
+
+.register-container {
+	 width: 100%;
+	 background-color: #fff;
+	 box-shadow: [0, 0, 0.625rem, rgba(0, 0, 0, 0.2)];
+ }
 
 @media all and (max-width: 980px) {
 	.benefits-content {
