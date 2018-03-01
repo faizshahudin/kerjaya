@@ -226,16 +226,15 @@ h2 {
 .faq-content {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-}
-
-
-.faq-content li {
-	list-style-type: none;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
 	text-align: left;
 }
+
+.faq-content-question {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+}
+
 /* Partners */
 .partners {
 	grid-area: partners;

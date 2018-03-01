@@ -6,7 +6,7 @@ import prestariangLogo from "./images/prestariang-logo.png"
 import ptptnLogo from "./images/ptptn-logo.png"
 import txLogo from "./images/tx-logo.png"
 
-function Partners() {
+function Partners(props) {
   const partners = [
     {
       name: "PTPTN",
@@ -30,10 +30,17 @@ function Partners() {
     }
   ]
 
+  const content = {
+    english: "#KerjaYa is a colloboration between:",
+    bm: "#JobMatching adalah program kerjasama antara"
+  }
+
+  let language = props.language
+
   return(
     <section className="partners">
       <div className="container">
-        <h3>#KerjaYa is a colloboration between:</h3>
+        <h3>{content[language]}</h3>
         <div className="partners-content">
           {partners.map((partner) => (
             <div>

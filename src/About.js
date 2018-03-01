@@ -1,12 +1,38 @@
 import React, { Component } from 'react';
 
-function About() {
+let About = (props) => {
+  const content = {
+    english: {
+      header: "Ready for a new beginning?",
+      button: "Get Started"
+    },
+    bm: {
+      header: "Bersedia untuk permulaan baharu?",
+      button: "Mula"
+    }
+  }
+  let language = props.language
+  console.log(content[language].header)
   return (
     <section className="about">
+      {/* {props.language == "english" &&
       <div className="about-content container">
-        <h2>Ready for a new beginning?</h2>
-        <button>Get Started</button>
+        <h2>{content.english.header}</h2>
+        <button>{content.english.button}</button>
       </div>
+      }
+      {props.language == "bm" &&
+      <div className="about-content container">
+        <h2>{content.bm.header}</h2>
+        <button>{content.bm.button}</button>
+      </div>
+      } */}
+
+      <div className="about-content container">
+        <h2>{content[language].header}</h2>
+        <button>{content[language].button}</button>
+      </div>
+
     </section>
   )
 }
