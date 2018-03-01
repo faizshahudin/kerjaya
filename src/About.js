@@ -16,7 +16,7 @@ let About = (props) => {
     <section className="about">
       <div className="about-content container">
         <h2>{content[language].header}</h2>
-        <button>{content[language].button}</button>
+        <button onClick={props.toggleModal}>{content[language].button}</button>
       </div>
     </section>
   )

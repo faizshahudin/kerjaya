@@ -34,6 +34,7 @@ class Register extends Component {
   }
 
   handleOutsideClick = (e) => {
+    console.log(e)
     if (this.props.showModal == true) {
       if (!this.modal.contains(e.target)) {
         this.props.toggleModal();

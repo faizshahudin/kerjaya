@@ -36,7 +36,7 @@ function Freebie(props) {
             <li>{content[language].tips[1]}</li>
             <li>{content[language].tips[2]}</li>
           </ul>
-          <button>{content[language].button}</button>
+          <button onClick={props.toggleModal}>{content[language].button}</button>
         </div>
       </div>
     </section>

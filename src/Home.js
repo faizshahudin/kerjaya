@@ -30,16 +30,16 @@ class Home extends Component {
           toggleModal={this.handleToggleModal}
         />
         <Benefits language={this.props.language}/>
-        <About language={this.props.language}/>
+        <About toggleModal={this.handleToggleModal} language={this.props.language}/>
         <Steps language={this.props.language}/>
-        <Freebie language={this.props.language}/>
-        <Faqs language={this.props.language}/>
+        <Freebie toggleModal={this.handleToggleModal} language={this.props.language}/>
+        <Faqs toggleModal={this.handleToggleModal} language={this.props.language}/>
         <Partners language={this.props.language}/>
         {this.state.showModal &&
           <Register
             language={this.props.language}
-          toggleModal={this.handleToggleModal}
-          showModal={this.state.showModal}
+            toggleModal={this.handleToggleModal}
+            showModal={this.state.showModal}
           />
         }
       </div>

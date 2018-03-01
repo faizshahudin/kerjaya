@@ -57,15 +57,21 @@ h2 {
 /* Header */
 /* Hero */
 .hero {
+	width: 100%;
 	grid-area: hero;
 	background-image: url('./images/website-banner.png');
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 50.5em;
-	background-size: 100%;
 	background-repeat: no-repeat;
 	color: white;
+	webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .hero-logo {
@@ -116,7 +122,6 @@ h2 {
 .hero-text {
 	font-size: 0.8em;
 }
-
 
 .hero-content button {
 	font-size: 1.5em;
@@ -218,6 +223,10 @@ h2 {
 .freebie-text {
 	text-align: left;
 	width: 80%;
+}
+
+.freebie-text ul {
+	margin-bottom: 30px;
 }
 
 .freebie-text button {
@@ -371,6 +380,10 @@ button {
 	.register-container {
 		 width: 100%;
 	 }
+	 /* .hero {
+		height: 100%;
+		padding-top: 2.5rem;
+	 } */
 }
 @media all and (max-width: 736px) {
 	.benefits-content {
@@ -402,6 +415,10 @@ button {
 	 .register-input-fields {
 		grid-template-columns: 1fr;
 	 }
+	 .hero {
+		height: 100%;
+		padding-top: 2.5rem;
+	 }
 }
 @media all and (max-width: 480px) {
 	.benefits-content {
@@ -432,5 +449,12 @@ button {
 	 }
 	 .register-input-fields {
 	 	grid-template-columns: 1fr;
+	 }
+	 .hero {
+	 	height: 100%;
+		padding-top: 2.5rem;
+	 }
+	 h1 {
+		 font-size: 2em;
 	 }
 }
