@@ -86,7 +86,7 @@ function Steps(props) {
         </div>
         <div className="steps-content">
           {steps[language].map((step) => (
-            <div className="steps-step">
+            <div className="steps-step" key={step.header}>
               <h5>{step.header}</h5>
               <img src={step.img} alt={"Photo of " + step.title + " step"}></img>
               <h6>{step.title}</h6>

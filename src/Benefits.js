@@ -56,6 +56,7 @@ function Benefits(props) {
           ))}
         </div>
       </div>
+        <hr />
     </section>
   )
 }

@@ -28,6 +28,19 @@ h2 {
 	font-size: 2em;
 }
 
+hr {
+	width: 10%;
+	/* height: 1px;
+	border-color: #f6d20b;
+	border: 0;
+	border-top: 1px solid; */
+	height: 1px;
+	border: 0;
+	border-top: 2px solid #f6d20b;
+
+	padding: 0;
+}
+
 .Home {
   display: grid;
   grid-template-columns: 1fr;
@@ -65,7 +78,7 @@ h2 {
 	justify-content: center;
 	height: 50.5em;
 	background-repeat: no-repeat;
-	color: white;
+	color: #283889;
 	webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -93,7 +106,7 @@ h2 {
 }
 
 .hero-language button {
-	color: white;
+	color: #283889;
 	border: none;
 	background-color: inherit;
 	cursor: pointer;
@@ -129,8 +142,8 @@ h2 {
 /* Benefits */
 .benefits {
 	grid-area: benefits;
-	background-color: #283889;
-	color: white;
+	background-color: white;
+	color: #283889;
 	font-weight: 300;
 }
 
@@ -160,24 +173,33 @@ h2 {
 	width: 80%;
 }
 
+.about-content h2 {
+	color: #f6d20b;
+}
+
 .about-content p {
 	font-size: 1.5em;
+}
+
+.about-content button {
+	background: none;
+	border-color: #f6d20b;
+	border: solid;
 }
 
 /* Steps */
 .steps {
 	grid-area: steps;
-	background-color: #f9f9f8;
+	background-color: white;
+	color: #283889;
 }
+
 .steps-content {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-gap: 20px;
 }
 
-.steps-step {
-	background-color: white;
-}
 
 .steps-step p {
 	width: 80%;
@@ -203,13 +225,20 @@ h2 {
 /* Freebie */
 .freebie {
 	grid-area: freebie;
-	background-color: #283889;
+	background-image: url('./images/background.png');
+	height: 100%;
+	background-repeat: no-repeat;
+	color: #283889;
+	webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .freebie-content {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
-	color: white;
+	color: #283889;
 }
 
 .freebie-image img {
@@ -221,12 +250,17 @@ h2 {
 }
 
 .freebie-text {
+	background-color: white;
+	padding: 40px;
 	text-align: left;
-	width: 80%;
+	width: 100%;
+	-webkit-box-shadow: 7px -7px 19px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    7px -7px 19px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         7px -7px 19px 6px #ccc;
 }
 
 .freebie-text ul {
-	margin-bottom: 30px;
+	margin-bottom: 80px;
 }
 
 .freebie-text button {
@@ -236,7 +270,7 @@ h2 {
 }
 
 .freebie-text h3{
-	color: #ede839;
+	color: #f6d20b;
 }
 
 .freebie-text p {
@@ -257,7 +291,18 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
+
+.faq h3 {
+	color: #f6d20b;
+}
+
+/* .faq-content-question-text {
+	display: none;
+	padding: 5px;
+} */
 
 /* Partners */
 .partners {
@@ -288,8 +333,8 @@ h2 {
 }
 
 button {
-	color: #black;
-	background: #ede839;
+	color: #f6d20b;
+	background: #283889;
 	border: none;
 	font-size: 16px;
 	border-radius: 3px;

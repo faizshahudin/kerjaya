@@ -42,13 +42,14 @@ class Register extends Component {
       }
     }
   }
-  //
-  // handleChange = (field, event) => {
-  //   let value = event.target.value
-  //   this.setState((state) => ({
-  //     state[field]: value
-  //   }))
-  // }
+
+  handleChange = (event) => {
+    let value = event.target.value
+    let name = event.target.name
+    this.setState((state) => ({
+      [name]: value
+    }))
+  }
 
   render() {
     let language = this.props.language
@@ -66,15 +67,17 @@ class Register extends Component {
             </label>
             <div className="register-input-fields">
               <input
+                name="name"
                 id="name"
                 placeholder={this.content[language].placeholder.name}
                 type="text"
                 autoComplete="off"
                 value={this.state.name}
-                onChange={(e) => (this.handleChange("name", e))}
+                onChange={this.handleChange}
                 >
               </input>
               <input
+                name="email"
                 id="username"
                 placeholder={this.content[language].placeholder.email}
                 type="text"

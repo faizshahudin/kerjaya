@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from "./Home"
-import Register from "./Register"
+import ThankYou from "./ThankYou"
 import { Route } from "react-router-dom"
 
 class App extends Component {
@@ -24,11 +24,6 @@ class App extends Component {
           language={this.state.language}
           changeLanguage={this.changeLanguage}
         />
-        )} />
-        <Route path="/register" render={() => (
-          <Register
-          language={this.state.language}
-          />
         )} />
         <footer className="footer">
           <p>Copyright © Prestariang Bhd.</p>

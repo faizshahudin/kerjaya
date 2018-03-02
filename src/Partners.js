@@ -43,7 +43,7 @@ function Partners(props) {
         <h3>{content[language]}</h3>
         <div className="partners-content">
           {partners.map((partner) => (
-            <div>
+            <div key={partner.name}>
               <img src={partner.logo} alt={"Photo of " + partner.name}></img>
             </div>
           ))}
