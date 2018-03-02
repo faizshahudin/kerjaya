@@ -25,6 +25,9 @@ class App extends Component {
           changeLanguage={this.changeLanguage}
         />
         )} />
+        <Route path="/thank-you" render={() => (
+          <ThankYou/>
+        )} />
         <footer className="footer">
           <p>Copyright © Prestariang Bhd.</p>
           <p>All rights reserved. All trademarks referenced herein are the properties of their respective owners.</p>

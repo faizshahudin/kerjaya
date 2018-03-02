@@ -383,6 +383,7 @@ button {
 	color: black;
 	width: 100%;
 	padding: 10px;
+	background-color: #f6d20b;
 }
 
 .register-form {
@@ -414,6 +415,61 @@ button {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+/* Thank You Page */
+.thank-you {
+	background-image: url("./images/thank-you-background.jpeg");
+	/* Full height */
+	height: 50em;
+	background-repeat: no-repeat;
+	background-position: center;
+	webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	padding: 1rem;
+	background-color: rgba(40, 56, 137, 0.95);
+	opacity: 1;
+}
+
+.thank-you-container {
+	color: #283889;
+	text-align: center;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 50px;
+	 width: 60%;
+	 background-color: rgba(255, 255, 255, 0.8);
+	 border-radius: 10px;
+ }
+
+ .thank-you-button {
+	 font-size: 1.5em;
+  }
+
+ .thank-you-footer {
+	 margin-top: 40px;
+	 padding: 0;
+ }
+
+ .thank-you-footer p {
+	margin: 0;
+ }
+
+ .thank-you-footer button {
+	 background: none;
+	 border: solid;
+	 color: #283889;
+ }
 
 @media all and (max-width: 980px) {
 	.benefits-content {
