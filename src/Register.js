@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from "./images/jobmatching-logo.png"
 import * as Api from "./Api"
-import serializeForm from "form-serialize"
+import serializeForm from 'form-serialize';
 
 class Register extends Component {
   constructor(props) {
@@ -36,7 +36,7 @@ class Register extends Component {
 
 // checks to see if click a event occurs outside the Register modal. If it is, runs toggleModal()
   handleOutsideClick = (e) => {
-    if (this.props.showModal == true) {
+    if (this.props.showModal === true) {
       if (!this.modal.contains(e.target)) {
         this.props.toggleModal();
         document.removeEventListener('click', this.handleOutsideClick, false);
@@ -55,7 +55,9 @@ class Register extends Component {
 
 // receives contact from handle Submit, and passes it to Api.addcontact. Also set's the value of contact state to the contact.
   addToMailing = (contact) => {
-    Api.addContact(contact).then(contact => {
+    console.log('inside-addToMailing: ' + contact);
+    Api.addContact(contact).then(contact => { // current problem: the promise return false
+      console.log('inside-addToMailing: ' + contact);
       this.setState((state) => ({
         contact: state.contact.concat([contact])
       }))
@@ -66,7 +68,8 @@ class Register extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const values = serializeForm(e.target, {hash: true})
-    console.log(values)
+    console.log(values);
+    console.log(this.addToMailing);
     if (this.addToMailing)
       this.addToMailing(values)
   }
